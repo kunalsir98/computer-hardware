@@ -4,22 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>computer hardware predictor</title>
+    <title>Computer Hardware Predictor</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f9f9f9;
             margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
         }
 
         .container {
-            max-width: 500px;
-            margin: 50px auto;
+            max-width: 400px;
+            margin: auto;
             background-color: #fff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
         }
 
         .form-group {
@@ -30,18 +34,17 @@
             font-weight: bold;
             color: #333;
             display: block;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
         }
 
         input[type="text"],
         select {
-            width: calc(100% - 22px);
+            width: 100%;
             padding: 12px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-sizing: border-box;
             transition: border-color 0.3s;
-            margin-top: 6px;
             font-size: 16px;
         }
 
@@ -72,26 +75,11 @@
             font-size: 16px;
             transition: background-color 0.3s;
             width: 100%;
-            margin-top: 12px;
+            margin-top: 20px;
         }
 
         input[type="submit"]:hover {
             background-color: #ff3f3f;
-        }
-
-        select,
-        input[type="text"] {
-            background-color: #f2f2f2;
-        }
-
-        select:hover,
-        input[type="text"]:hover {
-            background-color: #e0e0e0;
-        }
-
-        option {
-            background-color: #fff;
-            color: #333;
         }
     </style>
 </head>
@@ -99,6 +87,7 @@
 <body>
 
     <div class="container">
+        <h2 style="text-align: center; margin-bottom: 20px;">Computer Hardware Predictor</h2>
         <form action="{{ url_for('predict_datapoint') }}" method="POST">
             <div class="form-group">
                 <label for="MYCT">MYCT:</label>
@@ -132,7 +121,7 @@
                 <label for="ERP">ERP:</label>
                 <input type="text" id="ERP" name="ERP" placeholder="Enter ERP value (integer)">
             </div>
-            <input type="submit" value="Submit">
+            <input type="submit" value="Predict" style="background-color: #4CAF50;">
         </form>
     </div>
 
