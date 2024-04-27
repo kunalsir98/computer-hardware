@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>computer hardware predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        input[type="text"],
+        select {
+            width: calc(100% - 22px);
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+            margin-top: 6px;
+            font-size: 16px;
+        }
+
+        select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="10" height="5"><polygon points="0,0 10,0 5,5" style="fill:%23aaa;" /></svg>');
+            background-repeat: no-repeat;
+            background-position: right 10px top 50%;
+            background-size: 8px 5px;
+            padding-right: 30px;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            border-color: #66afe9;
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background-color: #ff5f5f;
+            color: #fff;
+            border: none;
+            padding: 14px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            width: 100%;
+            margin-top: 12px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff3f3f;
+        }
+
+        select,
+        input[type="text"] {
+            background-color: #f2f2f2;
+        }
+
+        select:hover,
+        input[type="text"]:hover {
+            background-color: #e0e0e0;
+        }
+
+        option {
+            background-color: #fff;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="{{ url_for('predict_datapoint') }}" method="POST">
+            <div class="form-group">
+                <label for="MYCT">MYCT:</label>
+                <input type="text" id="MYCT" name="MYCT" placeholder="Enter MYCT value (integer)">
+            </div>
+            <div class="form-group">
+                <label for="MMIN">MMIN:</label>
+                <input type="text" id="MMIN" name="MMIN" placeholder="Enter MMIN value (integer)">
+            </div>
+            <div class="form-group">
+                <label for="MMAX">MMAX:</label>
+                <input type="text" id="MMAX" name="MMAX" placeholder="Enter MMAX value (integer)">
+            </div>
+            <div class="form-group">
+                <label for="CACH">CACH:</label>
+                <input type="text" id="CACH" name="CACH" placeholder="Enter CACH value (integer)">
+            </div>
+            <div class="form-group">
+                <label for="CHMIN">CHMIN:</label>
+                <input type="text" id="CHMIN" name="CHMIN" placeholder="Enter CHMIN value (integer)">
+            </div>
+            <div class="form-group">
+                <label for="CHMAX">CHMAX:</label>
+                <input type="text" id="CHMAX" name="CHMAX" placeholder="Enter CHMAX value (integer)">
+            </div>
+            <div class="form-group">
+                <label for="PRP">PRP:</label>
+                <input type="text" id="PRP" name="PRP" placeholder="Enter PRP value (integer)">
+            </div>
+            <div class="form-group">
+                <label for="ERP">ERP:</label>
+                <input type="text" id="ERP" name="ERP" placeholder="Enter ERP value (integer)">
+            </div>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+
+</html>
