@@ -1,0 +1,15 @@
+artifact_uri: file:///G:/computer%20hardware/mlruns/0/48d3ff82cbb74b60b6ed39594b2210f1/artifacts
+end_time: 1719235290389
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 48d3ff82cbb74b60b6ed39594b2210f1
+run_name: masked-shad-3
+run_uuid: 48d3ff82cbb74b60b6ed39594b2210f1
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1719235275105
+status: 3
+tags: []
+user_id: ACER

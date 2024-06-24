@@ -69,6 +69,11 @@
     <div class="container">
         <h1>{{ final_result }}</h1>
         <p>Your prediction result is ready!</p>
+        {% if final_result < 100 %}
+        <p>Your computer is not performing well. Consider upgrading or optimizing its components.</p>
+        {% elif final_result >= 100 %}
+        <p>Your computer is performing well.</p>
+        {% endif %}
         <div class="cta">
             <a href="/">Go Back</a>
         </div>
